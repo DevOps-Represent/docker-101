@@ -26,10 +26,10 @@ Dockerizing applications gave us a couple of things:
 
  - **Isolation**. With everything that you need encapsulated inside the image/container, this means that you no longer have to worry about dependencies being missing on your destination host.
 
-![Concerns](/images/concerns.jpg)
+![Concerns](/images/3-concerns.jpg)
 
 ### Docker basics
 
 The Docker ecosystem has three primary parts to it - the **Client**, the **Host**, and the **Registry**.
 
-
+![Ecosystem](/images/4-docker.jpg)
