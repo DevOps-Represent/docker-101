@@ -19,9 +19,11 @@ Before beginning this workshop, you must:
 
 This workshop has three components:
 
- - Part 1: Docker Basics. In this part of the workshop, we explain what Docker is, why it's important.
+ - [Part 0: Concepts.](https://github.com/DevOps-Girls/docker-101/blob/master/0-Concepts.md) In this part, we'll review *what Docker is* and why it is important.
 
- - Part 2: Creating Docker Images. We'll break down how to create your own Docker images.
+ - [Part 1: Docker Basics.](https://github.com/DevOps-Girls/docker-101/blob/master/1-Basics.md) In this part of the workshop, we'll go through basic commands to run containers and pull images. 
+
+ - [Part 2: Creating Docker Images.](https://github.com/DevOps-Girls/docker-101/blob/master/2-Images.md) We'll break down how to create your own Docker images.
 
  - Part 3: Docker Tagging. We'll take a look at what Docker tags are, and how to publish your images.
 
