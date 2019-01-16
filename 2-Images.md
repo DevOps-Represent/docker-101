@@ -1,4 +1,4 @@
-## Dockwer Images
+## Docker Images
 
 
 ## Dockerfiles
@@ -7,7 +7,10 @@
 ## Docker build
 
 
-## Dockerfile instructions
+## Dockerfile instructions breakdown
+
+
+## Creating a new docker image
 
 
 ## Exercise

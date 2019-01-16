@@ -1,6 +1,15 @@
 ## Docker image tagging
 
 
+### Docker images
+
+#### What is 'latest'?
+
+#### Tagging images manually
+
+
+
+
 ## Miscellaneous Docker commands
 
 
