@@ -1,8 +1,4 @@
-## The Basics
-
-Note: Before proceeding, make sure that you've gone through the prerequisites! Quite important, yanno?
-
-### Basic Concepts
+## Basic Concepts
 
 Docker is in use now by a lot of companies when deplooying applications to the cloud. However, to explain why Docker is important, we may need to go back a couple of years to revisit how we used to deploy applications.
 
@@ -12,7 +8,7 @@ Over time, we started having [Hypervisors](https://en.wikipedia.org/wiki/Hypervi
 
 ![Virtualization](/images/1-vms.png)
 
-You would install the Hypervisor, and then "*fake*" hardware that you can install an operating system in. 
+You would install the Hypervisor, and then "*fake*" hardware that you can install an operating system in.
 
 During the last couple of years, people have started using Docker. Compared to Virtual Machines, it all stacks up like this:
 
@@ -48,46 +44,3 @@ Don't worry about absorbing this all - we'll slowly unpack how everything wires 
 ### Containers and Images
 
 A Docker image is a file, composed of multiple layers, used to execute code. When this code is in execution and is able to read/write is when we consider it a **container**. In short, an **image** is an inert **container**, and a **container** is an image that is running.
-
-### Docker Run
-
-Before we start with anything, let's run the following command in the command line interface (CLI):
-
-```
-docker run hello-world
-```
-
-This runs a pre-existing image called `hello-world` on your Docker host, which runs and outputs some cute text.
-
-### Docker Pull
-
-Running a `docker pull` means that your Docker Host downloads an image from the registry (but does not run it). So try running the following command:
-
-```
-docker pull busybox
-```
-
-This will pull the `busybox` image from the default Docker registry: https://hub.docker.com/explore/. You can also try pulling other images from the registry if you want!
-
-Now that you have the `busybox` image, you can try running it:
-
-```
-docker run busybox
-```
-
-Notice that nothing happened. *This is on purpose* - we didn't specify a command, so all Docker did was to load up `busybox`, ran an empty command, then exited. So what does it look like when we want to run a command? Try:
-
-```
-docker run busybox echo "Hallo Avocado!"
-```
-
-This will load up the `busybox` image, then run a command which outputs `Hallo Avocado!`. Look at you, you command-line *slayer*.
-
-
-### Docker Images
-
-
-### Docker Run A Service
-
-
-### Docker Run Shell Within Nginx
