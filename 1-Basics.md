@@ -12,7 +12,7 @@ Over time, we started having [Hypervisors](https://en.wikipedia.org/wiki/Hypervi
 
 ![Virtualization](/images/1-vms.png)
 
-You would install the Hypervisor, and then "*fake*" hardware that you can install an operating system in. While this meant that anything on top of the Hypervisor is now portable, it was subject to *add more stuff here*
+You would install the Hypervisor, and then "*fake*" hardware that you can install an operating system in. 
 
 During the last couple of years, people have started using Docker. Compared to Virtual Machines, it all stacks up like this:
 
@@ -51,8 +51,37 @@ A Docker image is a file, composed of multiple layers, used to execute code. Whe
 
 ### Docker Run
 
+Before we start with anything, let's run the following command in the command line interface (CLI):
+
+```
+docker run hello-world
+```
+
+This runs a pre-existing image called `hello-world` on your Docker host, which runs and outputs some cute text.
 
 ### Docker Pull
+
+Running a `docker pull` means that your Docker Host downloads an image from the registry (but does not run it). So try running the following command:
+
+```
+docker pull busybox
+```
+
+This will pull the `busybox` image from the default Docker registry: https://hub.docker.com/explore/. You can also try pulling other images from the registry if you want!
+
+Now that you have the `busybox` image, you can try running it:
+
+```
+docker run busybox
+```
+
+Notice that nothing happened. *This is on purpose* - we didn't specify a command, so all Docker did was to load up `busybox`, ran an empty command, then exited. So what does it look like when we want to run a command? Try:
+
+```
+docker run busybox echo "Hallo Avocado!"
+```
+
+This will load up the `busybox` image, then run a command which outputs `Hallo Avocado!`. Look at you, you command-line *slayer*.
 
 
 ### Docker pull from Dockerhub
