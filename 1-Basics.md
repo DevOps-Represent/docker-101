@@ -86,8 +86,70 @@ This will load up the `busybox` image, then run a command which outputs `Hallo A
 
 ### Docker Images
 
+Oh homes, now you have two images downloaded. You can check the Docker images you have by running `images`:
+
+```
+docker images
+```
+
+This should list something similar to:
+
+```
+REPOSITORY       TAG             IMAGE ID            CREATED             SIZE
+hello-world      latest          fce289e99eb9        2 weeks ago         1.84kB
+busybox          latest          3a093384ac30        2 weeks ago         1.2MB
+```
 
 ### Docker Run A Service
+
+Okay. Now let's try running a website - say, an Nginx application that just serves the default page. For this, all we have to do is run:
+
+```
+docker run nginx:latest
+```
+
+Notice that we didn't have to do a `docker pull`. What essentially happens is shown in the output of the command:
+
+```
+$ docker run nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+177e7ef0df69: Pull complete 
+ea57c53235df: Pull complete 
+bbdb1fbd4a86: Pull complete 
+Digest: sha256:b543f6d0983fbc25b9874e22f4fe257a567111da96fd1d8f1b44315f1236398c
+Status: Downloaded newer image for nginx:latest
+```
+
+As per the above, Docker tries to see if the image you're trying to run exists locally - then pulls from somewhere else if it does not exist. The *somewhere else* is the Docker Hub we saw earlier - it just grabs the matching version off that.
+
+But there's no website, right? How do we access it? It turns out that we need to *publish ports* for Docker to be able to serve out anything.
+
+But wait, it seems to be stuck? Not really. Docker is just running on attached mode, so we also need to run Docker in a *detached mode* it looks like. Just type *Ctrl-C* to cancel the running container, and rerun it with as the following:
+
+```
+docker run -d -P --name banana-smith nginx
+```
+
+`-d` runs Docker in *detached mode*, and `-P` publishes all exposed ports so we can access it. `banana-smith` is what we're naming the container - feel free to change it to any name you want. We can then find out how to access the site by running:
+
+```
+docker port banana-smith
+```
+
+Which will give us something like:
+
+```
+80/tcp -> 0.0.0.0:32768
+```
+
+This basically means that the service is accessible from port `32768` of your machine. You should be able to open up your browser and go to:
+
+```
+http://localhost:32768
+```
+
+Neat, right?
 
 
 ### Docker Run Shell Within Nginx
