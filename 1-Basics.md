@@ -153,3 +153,22 @@ Neat, right?
 
 
 ### Docker Run Shell Within Nginx
+
+Note that the Docker image you're running also contains other things. It has a small slice of the operating system, and this slice is actually available to you. You can access the command line inside the `nginx` container we were running earlier by running:
+
+```
+docker run -it nginx:latest /bin/bash
+```
+
+The `-it` flag attaches you to an interactive "console" within the container. `/bin/bash` is a shell that exists within the container. To see where the page that you saw before was, try running the following while inside the console:
+
+```
+cat /usr/share/nginx/html/index.html
+```
+
+And there you go! You can pull down and run containers.
+
+
+### Exercise
+
+Now, what you're going to find is that there are lots of Docker containers out in the wild. Now that you know how to pull down and run images, I've got a challenge for you: why not see if you can find and run the `wordpress` image from https://hub.docker.com/_/wordpress ?
