@@ -128,7 +128,7 @@ But there's no website, right? How do we access it? It turns out that we need to
 But wait, it seems to be stuck? Not really. Docker is just running on attached mode, so we also need to run Docker in a *detached mode* it looks like. Just type *Ctrl-C* to cancel the running container, and rerun it with as the following:
 
 ```
-docker run -d -P --name banana-smith nginx
+docker run -d -P --name banana-smith-container nginx
 ```
 
 `-d` runs Docker in *detached mode*, and `-P` publishes all exposed ports so we can access it. `banana-smith` is what we're naming the container - feel free to change it to any name you want. We can then find out how to access the site by running:
@@ -149,7 +149,11 @@ This basically means that the service is accessible from port `32768` of your ma
 http://localhost:32768
 ```
 
-Neat, right?
+Neat, right? Finally, stop the container by running:
+
+```
+docker stop banana-smith-container
+```
 
 
 ### Docker Run Shell Within Nginx
