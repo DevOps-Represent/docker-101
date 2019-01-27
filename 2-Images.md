@@ -1,8 +1,10 @@
+## Making your own Docker images
+
 As neat as it is to quickly run preexisting images, we probably want to explore how we can create our own images. In this section, we'll be taking a look at `Dockerfile`.
 
 A `Dockerfile` is the traditional naming of a file which contains instructions on how to build an image.
 
-## Docker Images
+#### Docker Images
 
 Before we start making Docker images, it's best if we familiarize ourselves with how images are stored in your Docker host (effectively, your laptop). Run the following command to get a list:
 
@@ -25,7 +27,7 @@ This effectively lists the images you have, the tags they are associated with, a
 docker run -it 7042885a156a /bin/bash
 ```
 
-## Dockerfiles
+#### Dockerfiles
 
 Okay! Now let's make us some images. In the `docker-101` directory, you'll find a file called `Dockerfile`. Inside this file, you'll see:
 
@@ -65,7 +67,7 @@ Then open up your browser, and access the same page - e.g., `http://localhost:32
 docker stop banana-smith-container
 ```
 
-## Dockerfile instructions breakdown
+#### Dockerfile instructions breakdown
 
 Now, in the `docker-101` directory, you'll find a file called `index.html`. Unfortunately, I have no eye for design - so feel free to modify the page to make it look as good as possible.
 
@@ -119,6 +121,6 @@ docker port banana-smith-container
 Then open up your browser, and access the same page - e.g., `http://localhost:32768`. What you should see is your new, fresh image!
 
 
-## Exercise
+#### Exercise
 
 Why not try adding an image to the index.html page?
