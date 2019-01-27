@@ -59,15 +59,66 @@ To see that it's actually running, check the port by:
 docker port banana-smith-container
 ```
 
-Then open up your browser, and access the same page.
+Then open up your browser, and access the same page - e.g., `http://localhost:32768`. Once done, cleanup the running container by running:
 
-## Docker build
-
+```
+docker stop banana-smith-container
+```
 
 ## Dockerfile instructions breakdown
 
+Now, in the `docker-101` directory, you'll find a file called `index.html`. Unfortunately, I have no eye for design - so feel free to modify the page to make it look as good as possible.
 
-## Creating a new docker image
+For the next section, we're going to be modifying our Dockerfile so that 1.) We replace the configuration, and 2.) We insert our `index.html` file. We'll do this by changing the `Dockerfile` so it looks like this:
+
+```
+FROM nginx:mainline-alpine
+RUN rm /etc/nginx/conf.d/*
+ADD wassup.conf /etc/nginx/conf.d/
+ADD index.html /usr/share/nginx/html/
+```
+
+The `RUN` directive runs the command specified (in this case, `rm /etc/nginx/conf.d/*` - which cleans out the configuration directory for Nginx). The `ADD` directive adds the files from your current directory into the image's directories. What we're doing here is we're basically:
+
+1.) Referencing the `nginx:mainline-alpine` image to start with
+
+2.) Removing existing configuration files
+
+3.) Adding a new configuration file (`wassup.conf`)
+
+4.) And adding a new index.html file.
+
+To build the image, run the same command as before:
+
+```
+docker build -t banana-smith-image .
+```
+
+Now, if you list out your images with `docker images`, you'll see something like: 
+
+```
+REPOSITORY                     TAG                 IMAGE ID            
+banana-smith-image             latest              98be87baf87e       
+hello-world                    latest              fce289e99eb9      
+busybox                        latest              3a093384ac30     
+nginx                          latest              7042885a156a    
+```
+
+What you might have noticed is that the IMAGE ID is now different. Run it the way you've run any other image:
+
+```
+docker run -d -P --name banana-smith-container banana-smith-image
+```
+
+Then check the port it's running under:
+
+```
+docker port banana-smith-container
+```
+
+Then open up your browser, and access the same page - e.g., `http://localhost:32768`. What you should see is your new, fresh image!
 
 
 ## Exercise
+
+Why not try adding an image to the index.html page?
