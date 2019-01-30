@@ -4,6 +4,8 @@ As neat as it is to quickly run preexisting images, we probably want to explore 
 
 A `Dockerfile` is the traditional naming of a file which contains instructions on how to build an image.
 
+![Dockerfile](8-docker-build.png)
+
 #### Docker Images
 
 Before we start making Docker images, it's best if we familiarize ourselves with how images are stored in your Docker host (effectively, your laptop). Run the following command to get a list:

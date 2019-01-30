@@ -1,3 +1,10 @@
+## Docker Basics
+
+In this section, we'll be talking about what it means to do a `docker run` and a `docker pull`:
+
+![Docker run-pull](/images/9-pull-run.png)
+
+
 ## Running Docker
 
 Before we start with anything, let's run the following command in the command line interface (CLI):

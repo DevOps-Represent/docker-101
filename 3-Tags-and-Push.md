@@ -2,6 +2,7 @@
 
 Images are good and fine, but eventually you'll need a way to share them with people or systems so that they can be executed or deployed. Docker uses mechanisms like `docker tag` and `docker push` to make this happen.
 
+![Push-tag](/images/10-push-tag.png)
 
 #### The basics of tags
 
