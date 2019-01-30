@@ -4,7 +4,7 @@ As neat as it is to quickly run preexisting images, we probably want to explore 
 
 A `Dockerfile` is the traditional naming of a file which contains instructions on how to build an image.
 
-![Dockerfile](8-docker-build.png)
+![Dockerfile](/images/8-docker-build.png)
 
 #### Docker Images
 
