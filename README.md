@@ -14,6 +14,12 @@ Before beginning this workshop, you must:
 
  - Signup for an account in [Docker Hub](https://hub.docker.com/)
 
+ - After signing up for an account, make sure you can login by running the following in your command line:
+
+```
+docker login
+```
+
 
 ## The Workshop
 
@@ -25,6 +31,5 @@ This workshop has three components:
 
  - [Part 2: Creating Docker Images.](https://github.com/DevOps-Girls/docker-101/blob/master/2-Images.md) We'll break down how to create your own Docker images.
 
- - Part 3: Docker Tagging. We'll take a look at what Docker tags are, and how to publish your images.
+ - [Part 3: Docker Tagging.](https://github.com/DevOps-Girls/docker-101/blob/master/3-Tags-and-Push.md) We'll take a look at what Docker tags are, and how to publish your images.
 
- - Part 4: Deploying. How do you use Docker containers in production? We'll have a look.
