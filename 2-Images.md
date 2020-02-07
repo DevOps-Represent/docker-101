@@ -43,7 +43,7 @@ To build the image, we can then run the following from inside the `docker-101` d
 
 ```
 docker build -t banana-smith-image .
-``` 
+```
 
 This takes our `Dockerfile` file, reads the instructions, and creates the basic image on your Docker host called `banana-smith-image`. Again, change the name if you want. You can verify that the image is built by listing the images you now have:
 
@@ -62,6 +62,23 @@ To see that it's actually running, check the port by:
 ```
 docker port banana-smith-container
 ```
+If you get an error, something like :
+
+```
+docker: Error response from daemon: Conflict. The container name "/banana-smith-container" is already in use by container "dd22b733a855cafc3a9235efbe892828ca82a9ee02cd30b9c7120ba891825414". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+```
+this might be because you already had a banana-smith-container and a banana-smith-image. You can remove the container by running
+
+```
+docker rm banana-smith-container
+```
+and remove the image by running
+
+```
+docker image rm banana-smith-image
+```
+Then try building the image again.
 
 Then open up your browser, and access the same page - e.g., `http://localhost:32768`. Once done, cleanup the running container by running:
 
@@ -98,14 +115,14 @@ To build the image, run the same command as before:
 docker build -t banana-smith-image .
 ```
 
-Now, if you list out your images with `docker images`, you'll see something like: 
+Now, if you list out your images with `docker images`, you'll see something like:
 
 ```
-REPOSITORY                     TAG                 IMAGE ID            
-banana-smith-image             latest              98be87baf87e       
-hello-world                    latest              fce289e99eb9      
-busybox                        latest              3a093384ac30     
-nginx                          latest              7042885a156a    
+REPOSITORY                     TAG                 IMAGE ID
+banana-smith-image             latest              98be87baf87e
+hello-world                    latest              fce289e99eb9
+busybox                        latest              3a093384ac30
+nginx                          latest              7042885a156a
 ```
 
 What you might have noticed is that the IMAGE ID is now different. Run it the way you've run any other image:
