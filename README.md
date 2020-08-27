@@ -33,3 +33,6 @@ This workshop has three components:
 
  - [Part 3: Docker Tagging.](https://github.com/DevOps-Girls/docker-101/blob/master/3-Tags-and-Push.md) We'll take a look at what Docker tags are, and how to publish your images.
 
+## What happens next?
+
+Once you're done with this workshop, you can also go through our [Kubernetes Workshop here.](https://github.com/DevOps-Girls/kubernetes-101/)
