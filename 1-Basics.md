@@ -34,7 +34,7 @@ docker run busybox
 Notice that nothing happened. *This is on purpose* - we didn't specify a command, so all Docker did was to load up `busybox`, ran an empty command, then exited. So what does it look like when we want to run a command? Try:
 
 ```
-docker run busybox echo "Hallo Avocado"
+docker run busybox echo "Hallo Avocado\!"
 ```
 
 This will load up the `busybox` image, then run a command which outputs `Hallo Avocado!`. Look at you, you command-line *slayer*.

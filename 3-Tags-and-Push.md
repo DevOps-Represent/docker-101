@@ -63,7 +63,7 @@ Name it however you want. In the below example, we're calling it `/my-first-repo
 
 ![Private Repo](/images/7-create-repo.png)
 
-We're setting it to **Private**.
+We're setting it to **Private**. You can change the repository privileges anytime!
 
 Now, remember the images we had earlier? We're going to add a tag - except the tag will be your Docker Hub username, and the repository you have created:
 
