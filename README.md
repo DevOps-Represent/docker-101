@@ -1,4 +1,4 @@
-# DevOps Girls Docker 101
+# DevOps Represent Docker 101
 
 ## What This Is
 
@@ -25,14 +25,14 @@ docker login
 
 This workshop has three components:
 
- - [Part 0: Concepts.](https://github.com/DevOps-Girls/docker-101/blob/master/0-Concepts.md) In this part, we'll review *what Docker is* and why it is important.
+ - [Part 0: Concepts.](https://github.com/DevOps-Represent/docker-101/blob/master/0-Concepts.md) In this part, we'll review *what Docker is* and why it is important.
 
- - [Part 1: Docker Basics.](https://github.com/DevOps-Girls/docker-101/blob/master/1-Basics.md) In this part of the workshop, we'll go through basic commands to run containers and pull images. 
+ - [Part 1: Docker Basics.](https://github.com/DevOps-Represent/docker-101/blob/master/1-Basics.md) In this part of the workshop, we'll go through basic commands to run containers and pull images. 
 
- - [Part 2: Creating Docker Images.](https://github.com/DevOps-Girls/docker-101/blob/master/2-Images.md) We'll break down how to create your own Docker images.
+ - [Part 2: Creating Docker Images.](https://github.com/DevOps-Represent/docker-101/blob/master/2-Images.md) We'll break down how to create your own Docker images.
 
- - [Part 3: Docker Tagging.](https://github.com/DevOps-Girls/docker-101/blob/master/3-Tags-and-Push.md) We'll take a look at what Docker tags are, and how to publish your images.
+ - [Part 3: Docker Tagging.](https://github.com/DevOps-Represent/docker-101/blob/master/3-Tags-and-Push.md) We'll take a look at what Docker tags are, and how to publish your images.
 
 ## What happens next?
 
-Once you're done with this workshop, you can also go through our [Kubernetes Workshop here.](https://github.com/DevOps-Girls/kubernetes-101/)
+Once you're done with this workshop, you can also go through our [Kubernetes Workshop here.](https://github.com/DevOps-Represent/kubernetes-101/)
