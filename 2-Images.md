@@ -73,6 +73,23 @@ this might be because you already had a banana-smith-container and a banana-smit
 ```
 docker rm banana-smith-container
 ```
+
+⚠️ Did you get the following error? ⚠️
+
+```
+Error response from daemon: You cannot remove a running container b854db1f962007c030a3609683903644511337cde67da69d45d5702240a8cb9a. Stop the container before attempting removal or force remove
+```
+We need to stop the container first by running
+
+```
+docker stop banana-smith-container
+```
+Let's try that again:
+
+```
+docker rm banana-smith-container
+```
+
 and remove the image by running
 
 ```

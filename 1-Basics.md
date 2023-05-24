@@ -126,6 +126,8 @@ The `-it` flag attaches you to an interactive "console" within the container. `/
 cat /usr/share/nginx/html/index.html
 ```
 
+To exit the container use *Ctrl-D*
+
 And there you go! You can pull down and run containers.
 
 
